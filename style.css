@@ -22,16 +22,20 @@ header {
     background-size: 100% auto;
     background-repeat: repeat-y;
     background-position: center;
-  }
+    width: 100%;
+}
 
 header > h1 {
-    margin: 0;
+    margin: 0 auto;
     font-size: 2.5em;
     padding: 20px;
 }
 
 main {
     padding: 20px;
+}
+.entry:first-child {
+    padding-top: 0px;
 }
 .entry {
     margin: 0 auto;
@@ -41,8 +45,8 @@ main {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 .entry > div {
-    height: 1.5em;
-    line-height: 1.5em;
+    height: 32px;
+    line-height: 1.0em;
     display: flex;
     align-items:center;
     justify-content: space-between;
@@ -103,18 +107,30 @@ footer p {
     font-size: 0.8em;
 }
 
-/* Media Queries for Responsive Layout */
-
-/* Responsive styles for screens narrower than 768px (e.g., mobile devices) */
-@media (max-width: 768px) {
+ /* Reduce padding for smaller screens */
+@media (max-width: 899px) {
     .entry {
-        padding: 10px; /* Reduce padding for smaller screens */
+      padding: 10px;
+      padding-bottom: 0px;
+      padding-top: 16px;
+    }
+    main {
+        padding: 10px;
+    }
+    header > h1 {
+        font-size: 2.0em;
+        padding: 5px;
     }
 }
 
-/* Responsive styles for screens wider than 768px (e.g., desktops) */
-@media (min-width: 769px) {
+@media (min-width: 900px) {
+    body {
+        font-size: 1.5em; /* Increase font size for desktop screens */
+    }
     .entry {
-        max-width: 800px; /* Set a maximum width for desktop screens */
+        max-width: 60vw; /* Set a maximum width for desktop screens */
+    }
+    header > h1 {
+      max-width: 60vw; /* Set a maximum width for desktop screens */
     }
 }
