@@ -1,25 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bass Studio Downloads</title>
+    <title>Bass Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@0,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <h1>Bass Studio Downloads</h1>
+        <h1>Bass Studio</h1>
     </header>
+
     <main>
-        <h2>Latest Release</h2>
-        <p>Download the latest version of Bass Studio:</p>
-        <ul>
-            <li><a href="https://github.com/nidefawl/bassstudio/releases/download/v0.6/bass-v0.6.0-windows-x86_64-setup.exe">Bass Studio (v0.6.0) Windows</a></li>
-            <li><a href="https://github.com/nidefawl/bassstudio/releases/download/v0.6/bass-v0.6.0-linux-x86_64.tar.gz">Bass Studio (v0.6.0) Linux</a></li>
-        </ul>
-        <p><a href="https://github.com/nidefawl/bassstudio/releases">Previous Releases</a></p>
+        <article class="entry">
+            <div><div class="entry-title"><img src="img/daw_icon.png"><a href="#about" id="about">About</a></div></div>
+
+            <section class="category">
+                <ul dir="auto">
+                    <li>Bass Studio is a DAW which supports VST2, VST3 and CLAP plugins.</li>
+                    <li>Releases are provided for Windows and Linux for the x86_64 architecture.</li>
+                    <li>Closed Source. Beta versions are free to download and use.</li>
+                </ul>
+            </section>
+        </article>
+        <article class="entry">
+            <div><div class="entry-title"><img src="img/effect.png"><a href="#features" id="features">Features</a></div></div>
+            <section class="category">
+                <ul dir="auto">
+                    <li>Supports CLAP, VST3 and VST2 plugins</li>
+                    <li>Sample accurate latency compensation</li>
+                    <li>Multithreaded audio processing</li>
+                    <li>Fast startup and load times</li>
+                    <li>Internal sample rate is indepentend from Audio Drivers sample rates</li>
+                    <li>Sample accurate modulation for plugin parameters</li>
+                    <li>Sample accurate automation for plugin parameters</li>
+                    <li>Python scripting support for Midi editing</li>
+                    <li>Midi groove and swing (support custom ones in .mid format)</li>
+                    <li>Supported Sample types: WAV, Flac, MP3</li>
+                    <li>Audio Sample stretching and pitch shifting</li>
+                    <li>Node based view on project hierarchy, freely routable</li>
+                    <li>Custom themes including background images</li>
+                    <li>Multi Monitor support (Second window with note editor i.e.)</li>
+                    <li>Midi Arp per Midi track that allows dotted notes (unlike some DAWs)</li>
+                    <li>Builtin plugins:
+                        <ul dir="auto">
+                            <li>Synth (Supports math formulas for modulations)</li>
+                            <li>EQ</li>
+                            <li>Gain</li>
+                            <li>Stereo Width</li>
+                            <li>Visualizer (With Python support)</li>
+                            <li>LFO (Sample accurate modulation for plugin parameters)</li>
+                            <li>Group</li>
+                            <li>Sample Delay</li>
+                            <li>Sample Crush</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </article>
+        <article class="entry">
+            <div><div class="entry-title"><img src="img/hyperlink.png"><a href="#download" id="download">Download</a></div></div>
+
+            <section class="category">
+                <h3>Bass Studio v0.6.2</h3>
+                <ul>
+                    <li>Windows: <a href="https://github.com/nidefawl/bassstudio/releases/download/v0.6.2/bass-v0.6.2-windows-x86_64-setup.exe">bass-v0.6.2-windows-x86_64-setup.exe</a></li>
+                    <li>Linux: <a href="https://github.com/nidefawl/bassstudio/releases/download/v0.6.2/bass-v0.6.2-linux-x86_64.tar.gz">bass-v0.6.2-linux-x86_64.tar.gz</a></li>
+                </ul>
+                <p>Previous Releases: <a href="https://github.com/nidefawl/bassstudio/releases">https://github.com/nidefawl/bassstudio/releases</a></p>
+            </section>
+        </article>
+        <article class="entry">
+            <div><div class="entry-title"><img src="img/discord.png"><a href="#community" id="community">Community</a></div></div>
+            <section class="category">
+                <p dir="auto">Join the Discord Server</p>
+                <p></p><a href="https://discord.gg/MxsgB7Ex" rel="nofollow">https://discord.gg/MxsgB7Ex</a></p>
+            </section>
+        </article>
+        <article class="entry">
+            <div><div class="entry-title"><a href="#release-v0.6.2" id="release-v0.6.2">Release Notes v0.6.2</a></div><div class="entry-date">May 1, 2024</div></div>
+
+            <section class="category">
+                <h3>New Features</h3>
+                <ul>
+                    <li>
+                        <b>64 Bit Summing:</b> Summing for tracks and plugins is now done using 64 bit floating points.
+                    </li>
+                    <li>
+                        <b>Improved MIDI Multi-Clip Editing</b>
+                        <div class="feature-image">
+                            <img src="img/bass_0.6.2_multi_clip_editing.jpg" alt="Multi-Clip Editing">
+                            <p class="image-description">MIDI editing across multiple clips.</p>
+                        </div>
+                    </li>
+                    <li><b>Random LFO:</b> Smooth, Linear, Exponential and Sample & Hold Modes.
+                        <div class="feature-image">
+                            <img src="img/bass_0.6.2_random_lfo.jpg" style="width: 75%;" alt="Random LFO">
+                        </div>
+                        <br>
+                    </li>
+                    <li><b>ARP Reset for Notes</b>
+                        <div class="feature-image">
+                            <img src="img/bass_0.6.2_arp_reset.jpg" style="width: 75%;" alt="ARP Reset">
+                        </div>
+                        <br>
+                    </li>
+                    <li><b>Free MIDI routing:</b> MIDI between tracks can be freely routed in the node graph.
+                        <div class="feature-image">
+                            <img src="img/bass_0.6.2_free_midi_routing.jpg" style="width: 75%;" alt="Free MIDI Routing">
+                        </div>
+                        <br>
+                    </li>
+                    <li><b>Per-Plugin Modulation Bypass</b>
+                        <div class="feature-image">
+                            <img src="img/bass_0.6.2_bypass_modulation_button.jpg" style="width: 20%;" alt="Per-Plugin Modulation Bypass">
+                        </div>
+                        <br>
+                    </li>
+                    <li><b>Improved asynchronous audio file loading</b>
+                        <div class="feature-image">
+                            <img src="img/bass_0.6.2_async_audio_loading.jpg" style="width: 25%;" alt="Improved asynchronous audio file loading">
+                        </div>
+                        <br>
+                    </li>
+                    <li><b>Improved accuracy of cross-modulating LFOs</b>
+                        <div class="feature-image">
+                            <img src="img/bass_0.6.2_cross_modulating_lfos.jpg" style="width: 75%;" alt="Improved accuracy of cross-modulating LFOs">
+                        </div>
+                        <br>
+                    </li>
+                    <li><b>Improved shading and selection visibility in note editor</b>
+                        <div class="feature-image">
+                            <img src="img/bass_0.6.2_note_editor_shading.jpg" style="width: 75%;" alt="Improved shading and selection visibility in note editor">
+                        </div>
+                        <br>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="category">
+                <h3>Other changes</h3>
+                <ul>
+                    <li>Reduce size of MIDI data in project files</li>
+                    <li>Fixed modulation settings when routing to bipolar parameters (i.e. pan)</li>
+                    <li>Fixed modulation routing in groups not getting loaded correctly</li>
+                    <li>Fixed Midi routing for external hardware devices</li>
+                    <li>Fixed clip fades sometimes not showing on audio clips</li>
+                    <li>Fixed a bug with the random number generators entropy</li>
+                    <li>Fixed "Apply Arp" processing muted notes</li>
+                    <li>Fixed audio clip length updates when changing BPM</li>
+                    <li>Fixed some controls not reacting to all keyboard inputs</li>
+                    <li>Fixed cut/copy/paste commands sometimes getting processed in the wrong editor</li>
+                    <li>Fixed possible crashes</li>
+                </ul>
+            </section>
+        </article>
+        
+        <article class="entry">
+            <div><div class="entry-title"><a href="#release-v0.6.0" id="release-v0.6.0">Release Notes v0.6.0</a></div><div class="entry-date">Apr 11, 2024</div></div>
+
+            <section class="category">
+                <h3>Changes</h3>
+                <ul>
+                    <li>Added VST3 support (sample accurate automation)</li>
+                    <li>Added Audio sample pitch shifting and time stretching</li>
+                    <li>Added Midi Grooves</li>
+                    <li>Added Freeze Track option</li>
+                    <li>Added Progressbar to export process</li>
+                    <li>Added .mp3 and .flac file loading support</li>
+                    <li>Added Apply Arp command</li>
+                    <li>Implemented recording of MIDI control data and pitchwheel changes</li>
+                    <li>EQ now has oversampling and sample accurate automation and better UI</li>
+                    <li>Synth now has oversampling</li>
+                    <li>Fixed note quantization command</li>
+                    <li>Fixed mouse scrolling on knobs</li>
+                    <li>Fixed mouse scrolling on lists</li>
+                    <li>Fixed a 1-sample bug in LFO modulation processing</li>
+                    <li>Midi files now load with correct velocities, control data and track names</li>
+                </ul>
+            </section>
+        </article>
     </main>
+
     <footer>
-        <p>&copy; 2024 Michael Hept</p>
+        <p><a href="https://bass-studio.com">bass-studio.com</a> &copy; 2024</p>
+        <p>Michael Hept</p>
     </footer>
 </body>
+
 </html>
