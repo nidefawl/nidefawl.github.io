@@ -125,12 +125,12 @@ footer p {
 
 @media (min-width: 900px) {
     body {
-        font-size: 1.5em; /* Increase font size for desktop screens */
+        font-size: 1.25em; /* Increase font size for desktop screens */
     }
     .entry {
-        max-width: 60vw; /* Set a maximum width for desktop screens */
+        max-width: 1000px; /* Set a maximum width for desktop screens */
     }
     header > h1 {
-      max-width: 60vw; /* Set a maximum width for desktop screens */
+      max-width: 1000px; /* Set a maximum width for desktop screens */
     }
 }
