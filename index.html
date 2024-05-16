@@ -71,10 +71,11 @@
             <h2><div class="page-title"><img src="img/hyperlink.png"><a href="#download" id="download" title="Download">Download</a></div></h2>
 
             <section class="page-content">
-                <h3>Bass Studio v0.6.2</h3>
+                <h3>Bass Studio v0.6.3.0</h3>
                 <ul>
-                    <li>Windows: <a href="https://github.com/nidefawl/bassstudio/releases/download/v0.6.2/bass-v0.6.2-windows-x86_64-setup.exe"  title="Download bass-v0.6.2-windows-x86_64-setup.exe">bass-v0.6.2-windows-x86_64-setup.exe</a></li>
-                    <li>Linux: <a href="https://github.com/nidefawl/bassstudio/releases/download/v0.6.2/bass-v0.6.2-linux-x86_64.tar.gz" title="Download bass-v0.6.2-linux-x86_64.tar.gz">bass-v0.6.2-linux-x86_64.tar.gz</a></li>
+                    <li>Windows: <a href="https://github.com/nidefawl/bassstudio/releases/download/v0.6.3.0/bass-v0.6.3.0-windows-x86_64-setup.exe"  title="Download bass-v0.6.3.0-windows-x86_64-setup.exe">bass-v0.6.3.0-windows-x86_64-setup.exe</a></li>
+                    <li>Linux: <a href="https://github.com/nidefawl/bassstudio/releases/download/v0.6.3.0/bass-v0.6.3.0-linux-x86_64.tar.gz" title="Download bass-v0.6.3.0-linux-x86_64.tar.gz">bass-v0.6.3.0-linux-x86_64.tar.gz</a></li>
+                    <li>Linux with Python support: <a href="https://github.com/nidefawl/bassstudio/releases/download/v0.6.3.0/bass-v0.6.3.0-linux-python-3.11-x86_64.tar.gz" title="Download bass-v0.6.3.0-linux-python-3.11-x86_64.tar.gz">bass-v0.6.3.0-linux-python-3.11-x86_64.tar.gz</a></li>
                 </ul>
                 <p>Previous Releases: <a href="https://github.com/nidefawl/bassstudio/releases" title="Previous Releases">https://github.com/nidefawl/bassstudio/releases</a></p>
             </section>
@@ -87,84 +88,107 @@
             </section>
         </article>
         <article class="page">
-            <h2><div class="page-title"><a href="#release-v0.6.2" id="release-v0.6.2" title="Release Notes v0.6.2">Release Notes v0.6.2</a></div><div class="page-date">May 1, 2024</div></h2>
+            <h2><div class="page-title"><a href="#release-v0.6.3.0" id="release-v0.6.3.0" title="Release Notes v0.6.3.0">Release Notes v0.6.3.0</a></div><div class="page-date">May 16, 2024</div></h2>
 
             <section class="page-content">
-                <h3>New Features</h3>
+                <h3>Changes</h3>
                 <ul>
-                    <li>
-                        <b>64 Bit Summing:</b> Summing for tracks and plugins is now done using 64 bit floating points.
-                    </li>
-                    <li>
-                        <b>Improved MIDI Multi-Clip Editing</b>
-                        <div class="feature-image">
-                            <img src="img/bass_0.6.2_multi_clip_editing.jpg" alt="Multi-Clip Editing">
-                            <p class="image-description">MIDI editing across multiple clips.</p>
-                        </div>
-                    </li>
-                    <li><b>Random LFO:</b> Smooth, Linear, Exponential and Sample & Hold Modes.
-                        <div class="feature-image">
-                            <img src="img/bass_0.6.2_random_lfo.jpg" style="width: 75%;" alt="Random LFO">
-                        </div>
-                        <br>
-                    </li>
-                    <li><b>ARP Reset for Notes</b>
-                        <div class="feature-image">
-                            <img src="img/bass_0.6.2_arp_reset.jpg" style="width: 75%;" alt="ARP Reset">
-                        </div>
-                        <br>
-                    </li>
-                    <li><b>Free MIDI routing:</b> MIDI between tracks can be freely routed in the node graph.
-                        <div class="feature-image">
-                            <img src="img/bass_0.6.2_free_midi_routing.jpg" style="width: 75%;" alt="Free MIDI Routing">
-                        </div>
-                        <br>
-                    </li>
-                    <li><b>Per-Plugin Modulation Bypass</b>
-                        <div class="feature-image">
-                            <img src="img/bass_0.6.2_bypass_modulation_button.jpg" style="width: 20%;" alt="Per-Plugin Modulation Bypass">
-                        </div>
-                        <br>
-                    </li>
-                    <li><b>Improved asynchronous audio file loading</b>
-                        <div class="feature-image">
-                            <img src="img/bass_0.6.2_async_audio_loading.jpg" style="width: 25%;" alt="Improved asynchronous audio file loading">
-                        </div>
-                        <br>
-                    </li>
-                    <li><b>Improved accuracy of cross-modulating LFOs</b>
-                        <div class="feature-image">
-                            <img src="img/bass_0.6.2_cross_modulating_lfos.jpg" style="width: 75%;" alt="Improved accuracy of cross-modulating LFOs">
-                        </div>
-                        <br>
-                    </li>
-                    <li><b>Improved shading and selection visibility in note editor</b>
-                        <div class="feature-image">
-                            <img src="img/bass_0.6.2_note_editor_shading.jpg" style="width: 75%;" alt="Improved shading and selection visibility in note editor">
-                        </div>
-                        <br>
-                    </li>
+                    <li>Fix incorrect audio output latency compensation</li>
+                    <li>Fix feedback routing loop detection</li>
+                    <li>Audio clips: Fix mute/unmute not working</li>
+                    <li>EQ: Fix incorrect latency compensation</li>
+                    <li>Synth: Fix midi input delay when oversampling is enabled</li>
+                    <li>Arp: Fix random time parameter automation</li>
+                    <li>Freezing Tracks: Tracks now appear in the correct position</li>
+                    <li>commandline plugin scanner: Fix --help usage output</li>
+                    <li>Update shader view: Now loads shadertoy shaders. iTime is synchronized to quarter beats.</li>
+                    <li>Don't run autosave during audio rendering</li>
+                    <li>Linux: Add installer for linux build without python dependency</li>
+                    <li>Rendering: Don't render text with fontsize &lt; 2 and improve font atlas usage</li>
+                    <li>Disable audio block allocation tracking</li>
+                    <li>Add outline stroke to hovered clips</li>
                 </ul>
-            </section>
 
-            <section class="page-content">
-                <h3>Other changes</h3>
-                <ul>
-                    <li>Reduce size of MIDI data in project files</li>
-                    <li>Fixed modulation settings when routing to bipolar parameters (i.e. pan)</li>
-                    <li>Fixed modulation routing in groups not getting loaded correctly</li>
-                    <li>Fixed Midi routing for external hardware devices</li>
-                    <li>Fixed clip fades sometimes not showing on audio clips</li>
-                    <li>Fixed a bug with the random number generators entropy</li>
-                    <li>Fixed "Apply Arp" processing muted notes</li>
-                    <li>Fixed audio clip length updates when changing BPM</li>
-                    <li>Fixed some controls not reacting to all keyboard inputs</li>
-                    <li>Fixed cut/copy/paste commands sometimes getting processed in the wrong editor</li>
-                    <li>Fixed possible crashes</li>
-                </ul>
             </section>
         </article>
-        
+        <article class="page">
+          <h2><div class="page-title"><a href="#release-v0.6.2" id="release-v0.6.2" title="Release Notes v0.6.2">Release Notes v0.6.2</a></div><div class="page-date">May 1, 2024</div></h2>
+
+          <section class="page-content">
+              <h3>New Features</h3>
+              <ul>
+                  <li>
+                      <b>64 Bit Summing:</b> Summing for tracks and plugins is now done using 64 bit floating points.
+                  </li>
+                  <li>
+                      <b>Improved MIDI Multi-Clip Editing</b>
+                      <div class="feature-image">
+                          <img src="img/bass_0.6.2_multi_clip_editing.jpg" alt="Multi-Clip Editing">
+                          <p class="image-description">MIDI editing across multiple clips.</p>
+                      </div>
+                  </li>
+                  <li><b>Random LFO:</b> Smooth, Linear, Exponential and Sample & Hold Modes.
+                      <div class="feature-image">
+                          <img src="img/bass_0.6.2_random_lfo.jpg" style="width: 75%;" alt="Random LFO">
+                      </div>
+                      <br>
+                  </li>
+                  <li><b>ARP Reset for Notes</b>
+                      <div class="feature-image">
+                          <img src="img/bass_0.6.2_arp_reset.jpg" style="width: 75%;" alt="ARP Reset">
+                      </div>
+                      <br>
+                  </li>
+                  <li><b>Free MIDI routing:</b> MIDI between tracks can be freely routed in the node graph.
+                      <div class="feature-image">
+                          <img src="img/bass_0.6.2_free_midi_routing.jpg" style="width: 75%;" alt="Free MIDI Routing">
+                      </div>
+                      <br>
+                  </li>
+                  <li><b>Per-Plugin Modulation Bypass</b>
+                      <div class="feature-image">
+                          <img src="img/bass_0.6.2_bypass_modulation_button.jpg" style="width: 20%;" alt="Per-Plugin Modulation Bypass">
+                      </div>
+                      <br>
+                  </li>
+                  <li><b>Improved asynchronous audio file loading</b>
+                      <div class="feature-image">
+                          <img src="img/bass_0.6.2_async_audio_loading.jpg" style="width: 25%;" alt="Improved asynchronous audio file loading">
+                      </div>
+                      <br>
+                  </li>
+                  <li><b>Improved accuracy of cross-modulating LFOs</b>
+                      <div class="feature-image">
+                          <img src="img/bass_0.6.2_cross_modulating_lfos.jpg" style="width: 75%;" alt="Improved accuracy of cross-modulating LFOs">
+                      </div>
+                      <br>
+                  </li>
+                  <li><b>Improved shading and selection visibility in note editor</b>
+                      <div class="feature-image">
+                          <img src="img/bass_0.6.2_note_editor_shading.jpg" style="width: 75%;" alt="Improved shading and selection visibility in note editor">
+                      </div>
+                      <br>
+                  </li>
+              </ul>
+          </section>
+
+          <section class="page-content">
+              <h3>Other changes</h3>
+              <ul>
+                  <li>Reduce size of MIDI data in project files</li>
+                  <li>Fixed modulation settings when routing to bipolar parameters (i.e. pan)</li>
+                  <li>Fixed modulation routing in groups not getting loaded correctly</li>
+                  <li>Fixed Midi routing for external hardware devices</li>
+                  <li>Fixed clip fades sometimes not showing on audio clips</li>
+                  <li>Fixed a bug with the random number generators entropy</li>
+                  <li>Fixed "Apply Arp" processing muted notes</li>
+                  <li>Fixed audio clip length updates when changing BPM</li>
+                  <li>Fixed some controls not reacting to all keyboard inputs</li>
+                  <li>Fixed cut/copy/paste commands sometimes getting processed in the wrong editor</li>
+                  <li>Fixed possible crashes</li>
+              </ul>
+          </section>
+        </article>
         <article class="page">
             <h2><div class="page-title"><a href="#release-v0.6.0" id="release-v0.6.0" title="Release Notes v0.6.0">Release Notes v0.6.0</a></div><div class="page-date">Apr 11, 2024</div></h2>
 
