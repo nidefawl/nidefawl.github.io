@@ -84,6 +84,7 @@ footer p {
     display: flex;
     align-items:center;
     font-size: 1.5em;
+    float: left;
 }
 .page-title > img {
     height: 32px;
@@ -93,6 +94,10 @@ footer p {
 }
 .page-date {
     float: right;
+}
+.page-content {
+    clear: both;
+    margin-top: 3em;
 }
 
 .category {
